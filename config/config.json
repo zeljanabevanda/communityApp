@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "postgres",
-    "password": "postgres",
+    "password": 1234,
     "database": "communityApp",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": "postgres",
+    "password": 1234,
     "database": "communityApp",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "postgres",
+    "password": 1234,
     "database": "communityApp",
     "host": "127.0.0.1",
     "dialect": "postgres"
