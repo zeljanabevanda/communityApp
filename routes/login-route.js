@@ -8,7 +8,7 @@ router.post('/login', (req, res) => {
     //console.log(req.body) 
     let password = req.body.password; 
     let username = req.body.username;
-    console.log('logion')
+    console.log(req.body, 'logion')
     User.login(req).then((user) => {
         res.send(user)
     });

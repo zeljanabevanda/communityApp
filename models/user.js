@@ -14,10 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     return new Promise((resolve, reject) => {
       let password = req.body.password; 
       let username = req.body.username;
+      console.log(req.body, 'USERNAME')
       User.findOne({where: {
         username: username
     }}).then(user => {
-        console.log(user)
+        console.log(user, 'USER')
         if(user) {
             bcrypt.compare(password, user.password, function(err, result) {
                 console.log(result, 'passw');
