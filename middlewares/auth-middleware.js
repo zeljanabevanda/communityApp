@@ -13,7 +13,7 @@ const authMiddleware = (req, res, next) => {
             res.send('token nije valjan');
         }
     })
-    next();
+   
 }
 
 module.exports= authMiddleware

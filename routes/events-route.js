@@ -10,8 +10,6 @@ router.post("/events", (req, res) => {
     Event.create(req.body).then(event => {
         res.send(event)
     })
-    
-
 })
 
 
