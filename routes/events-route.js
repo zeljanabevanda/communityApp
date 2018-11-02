@@ -10,6 +10,18 @@ router.post("/events", (req, res) => {
     Event.create(req.body).then(event => {
         res.send(event)
     })
+    
+    const id = req.params.id;
+
+    const title       = req.body.title;
+    const description = req.body.description;
+    const startingAt  = req.body.startingAt;
+    const endingAt    = req.body.endingAt;
+
+    Event.update({title, description,startingAt,endingAt}, {where: {id: id}, returning: true})
+    .then(result => {
+        console.log('radiiii');
+    })
 })
 
 
