@@ -11,6 +11,7 @@ router.post('/register', (req, res) => {
         if(!user) {
             bcrypt.hash(password, null, null, function(err, hash) {
                 req.body.password = hash;
+                res.send(req.body)
                 User.create(req.body).then(() => {
                     console.log('spremč')
                 })

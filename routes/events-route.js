@@ -24,5 +24,13 @@ router.post("/events", (req, res) => {
     })
 })
 
+router.delete("/events/:id", (req,res) => {
+    const id = req.params.id;
+
+    Event.destroy({where: {id: id} }).then(() => {
+        res.send("uspjesno")
+    })
+})
+
 
 module.exports = router;

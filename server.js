@@ -10,17 +10,19 @@ app.use(bodyParser.urlencoded({
   }));
   app.use(bodyParser.json());
 //routes
-const login    = require('./routes/login-route');
-const register = require('./routes/register-route');
-const usersRoutes = require('./routes/users-route');
-const profileRoutes = require('./routes/profile-route');
-const eventsRoutes = require('./routes/events-route');
+const login            = require('./routes/login-route');
+const register         = require('./routes/register-route');
+const usersRoutes      = require('./routes/users-route');
+const profileRoutes    = require('./routes/profile-route');
+const eventsRoutes     = require('./routes/events-route');
+const deleteRoute      = require('./routes/delete-route');
 
 app.use(login);
 app.use(register);
 app.use(usersRoutes);
 app.use(profileRoutes);
 app.use(eventsRoutes);
+app.use(deleteRoute);
 
 
     
