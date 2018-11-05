@@ -33,8 +33,6 @@ app.use(eventsRoutes);
 
 
 
-
-
 app.listen(3000, function() {
     console.log("listennn")
 })
