@@ -22,6 +22,16 @@ router.put('/user/:id', authMiddleware, (req, res) => {
 
 })
 
+router.delete("/user/:id", (req, res) => {
+    const id = req.params.id;
+
+    User.destroy({where:{id: id} }).then(() => {
+        res.send("uspijesno")
+    })
+
+
+})
+
 
 
 
